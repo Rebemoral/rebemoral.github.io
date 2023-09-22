@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        details {
+            width: 100%;
+            max-width: 500px;
+        }
+        summary {
+            background: #f2f2f2;
+            cursor: pointer;
+            pedding: 15px;
+
+        }
+        p {
+            padding: 15px;
+            margin: 0;
+            background: #f2f2f2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1><center><b>Consejos HTML</b></center></h1>
+    <div class ="wrapper">
+        <details>
+            <summary>
+                <b>El atributo `loading=lazy`</b>
+            </summary>
+            <p>Consejo de rendimiento. Puede utilizar el loading=lazyatributo para diferir la carga de la imagen hasta que el usuario se desplace hacia ella.</p>
+            <img src="image.jpg" loading="lazy" alt="Alternative text">
+        </details>
+
+        <!-- src: insertamos la imagen 
+        loading: no se descarga la imagen del servidor hasta que el usuario se ponga enciam de ella (no lo conocia)
+        alt: texto alternativo cuando no carga la imagen
+     -->
+    </div>
+    <div class="wrapper">
+        <details>
+        <summary>
+            <b>Enlaces de correo electrónico, llamadas y SMS:</b>
+        </summary>
+        <p>Correo electrónico</p>
+        <a href="mailto:{email}?subject={subject}&body={content}">
+            mandar correo electrónico
+        </a><br>
+        <a href="tel:{phone}">
+            para llamar por telfono
+        </a><br>
+        <a href="sms: {phone}?body={content}">
+            para mandar un sms
+        </a>
+    </details>
+    </div>
+    <div class="wrapper">
+        <details>
+            <summary>
+                <b>ordenadas del atributo `inicio`.</b>
+            </summary>
+            <p>el atributo <b>start</b> para cambiar el punto de partida de sus listas ordenadas</p>
+            <ol start="11">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Go</li>
+            </ol>
+        </details>
+    </div>
+
+</body>
+</html>
