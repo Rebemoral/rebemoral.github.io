@@ -1,82 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         .wrapper {
+
             padding: 30px;
+
             display: flex;
-            justify-content: center;
+
+            justify-content: left;
+
         }
+
         details {
+
             width: 100%;
+
             max-width: 500px;
+
         }
-        summary {
+
+        sumary {
+
             background: #f2f2f2;
+
             cursor: pointer;
-            pedding: 15px;
 
-        }
-        p {
             padding: 15px;
-            margin: 0;
-            background: #f2f2f2;
+
         }
 
+        p {
 
+            padding: 15px;
+
+            margin: 0;
+
+            background: #f2f2f2;
+
+        }
+
+        label {
+
+            display: block;
+
+            margin-top: 15px;
+
+        }
+
+        meter {
+
+            width: 300px;
+
+            height: 20px;
+
+        }
+
+        input {
+
+            padding: 10px;
+
+            font-size: 1.2em;
+
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+
+
+        form {
+
+            font-family: 'Roboto Mono', monospace;
+
+        }
+
+        input[type=range] {
+
+            background: red;
+
+            width: 200px;
+
+            margin-bottom: 20px;
+
+        }
+
+        h3 {
+
+            margin-top: 100px;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+        }
     </style>
-</head>
-<body>
-    <h1><center><b>Consejos HTML</b></center></h1>
-    <div class ="wrapper">
-        <details>
-            <summary>
-                <b>El atributo `loading=lazy`</b>
-            </summary>
-            <p>Consejo de rendimiento. Puede utilizar el loading=lazyatributo para diferir la carga de la imagen hasta que el usuario se desplace hacia ella.</p>
-            <img src="image.jpg" loading="lazy" alt="Alternative text">
-        </details>
 
-        <!-- src: insertamos la imagen 
+    
+</head>
+
+<body>
+    <h1>
+        <center><b>Consejos HTML</b></center>
+    </h1>
+    <h2><a href="//markodenic.com/html-tips/">//markodenic.com/html-tips/</a>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>El atributo `loading=lazy`</b>
+                </summary>
+                <p>Consejo de rendimiento. Puede utilizar el loading=lazyatributo para diferir la carga de la imagen
+                    hasta que el usuario se desplace hacia ella.</p>
+                <img src="image.jpg" loading="lazy" alt="Alternative text">
+            </details>
+
+            <!-- src: insertamos la imagen 
         loading: no se descarga la imagen del servidor hasta que el usuario se ponga enciam de ella (no lo conocia)
         alt: texto alternativo cuando no carga la imagen
      -->
-    </div>
-    <div class="wrapper">
-        <details>
-        <summary>
-            <b>Enlaces de correo electrónico, llamadas y SMS:</b>
-        </summary>
-        <p>Correo electrónico</p>
-        <a href="mailto:{email}?subject={subject}&body={content}">
-            mandar correo electrónico
-        </a><br>
-        <a href="tel:{phone}">
-            para llamar por telfono
-        </a><br>
-        <a href="sms: {phone}?body={content}">
-            para mandar un sms
-        </a>
-    </details>
-    </div>
-    <div class="wrapper">
-        <details>
-            <summary>
-                <b>ordenadas del atributo `inicio`.</b>
-            </summary>
-            <p>el atributo <b>start</b> para cambiar el punto de partida de sus listas ordenadas</p>
-            <ol start="11">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Go</li>
-            </ol>
-        </details>
-    </div>
+        </div>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>Enlaces de correo electrónico, llamadas y SMS:</b>
+                </summary>
+                <p>Correo electrónico</p>
+                <a href="mailto:{email}?subject={subject}&body={content}">
+                    mandar correo electrónico
+                </a><br>
+                <a href="tel:{phone}">
+                    para llamar por telfono
+                </a><br>
+                <a href="sms: {phone}?body={content}">
+                    para mandar un sms
+                </a>
+            </details>
+        </div>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>Listas ordenadas del atributo `inicio`.</b>
+                </summary>
+                <p>el atributo <b>start</b> para cambiar el punto de partida de sus listas ordenadas</p>
+                <ol start="11">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Go</li>
+                </ol>
+            </details>
+        </div>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>El elemento "metro"</b>
+                </summary>
+                <p> <b>&ltmeter&gt</b>elemento para mostrar cantidades. No se necesita JavaScript/CSS.</p>
+                <label for="value1">Low </label>
+                <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="25"></meter>
+                <label for="value1">Medium </label>
+                <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="50"></meter>
+                <label for="value1">High </label>
+                <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="80"></meter>
+            </details>
+            <!-- las etiquetas low, high y optimun son que si llegan a esos valores automáticamente se ponene de un color, esos colores los coje el sistema de manera predeterminada no estan en el css -->
+        </div>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>Búsqueda nativa HTML</b>
+                </summary>
+                <input list="items">
+                <datalist id="items">
+                    <option value="Marko Denic">
+                    <option value="FreeCodeCamp">
+                    <option value="FreeCodeTools">
+                    <option value="Web Development">
+                    <option value="Web Developer">
+                </datalist>
+            </details>
+        </div>
+        <div class="wrapper">
+            <details>
+                <summary>
+                    <b>Elemento de conjunto de campos</b>
+                </summary>
+                <p>Puede utilizar el <b>&ltfieldset&gt</b> elemento para agrupar varios controles así como etiquetas (
+                    <label>) dentro de un formulario web.</p>
+                <form>
+                    <fieldset>
+                        <legend>Choose your favorite language</legend>
+
+                        <input type="radio" id="javascript" name="language">
+                        <label for="javascript">JavaScript</label><br />
+
+                        <input type="radio" id="python" name="language">
+                        <label for="python">Python</label><br />
+
+                        <input type="radio" id="java" name="language">
+                        <label for="java">Java</label>
+                    </fieldset>
+                </form>
+            </details>
+        </div>
 
 </body>
+
 </html>
